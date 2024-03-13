@@ -1,0 +1,302 @@
+*{
+    font-family: 'Cambria';
+    margin: 0;
+    padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* pakai body width 100% biar bisa flex space between */
+body {
+  width: 100%;
+}
+
+
+
+/* =============================== Navbar ======================= */
+.navbar_header{
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 2;
+}
+/* On Active header */
+.navbar_header.active{
+  background-color: white;
+}
+
+.navbar_header.active .nav_branding{
+  color: black;
+}
+/* On Active header */
+
+/* On Hover header */
+.navbar_header:hover{
+  background-color: white;
+  border-style: #1a1a1a;  
+}
+
+.navbar_header:hover .nav_branding,
+.navbar_header:hover .nav_item a,
+.navbar_header:hover .dropdown .dropbtn{
+  color: black;
+}
+.navbar_header:hover .bar{
+  background-color: black;
+}
+/* On Hover header */
+
+li{
+  list-style: none;
+}
+
+.nav_item a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar_container{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav_branding{
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+
+}
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+.navbar_header.active .bar{
+  background-color: black;
+}
+/* Desktop Responsive Mode */
+@media(min-width:769px){
+/* Submenu Navbar Desktop Mode */
+  .desktop_nav_Submenu{
+    display: none;
+  }
+  .navbar_header:hover .desktop_nav_Submenu{
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #8e8c8c4c;
+    padding-block: 30px;
+    gap: 50px;
+  }
+  .navbar_header:hover .desktop_nav_Submenu a{
+    text-decoration: none;
+    color: black;
+  }
+  .navbar_header:hover .desktop_nav_Submenu .category_links{
+    font-size: 1.5rem;
+    margin-left: 20vw;
+    margin-block: 20px;
+  }
+/* Submenu Navbar Desktop Mode */
+}
+/* Mobile Responsive Mode */
+@media(max-width:768px){
+  .hamburger{
+      display: block;
+      
+  }
+
+  .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .nav_menu{
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  .nav_item{
+      margin: 16px 0;
+    }
+    
+  .nav_item a{
+    color: #1a1a1a;
+  }
+
+  .nav_menu.active{
+      left: 0;
+  }
+  .dropdown .dropbtn {
+      color: black; 
+  }
+  .desktop_nav_Submenu{
+    display: none;
+  }
+}
+
+/* ////// Dropdown Content Product ////////// */
+.dropdown .dropbtn {
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content { 
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Desktop Responsive Onclick */
+@media screen and (min-width:769px){
+  .dropdown .dropbtn{
+    color: white;
+  }
+   /* =============================== Spesifict Product Dropdown ======================= */
+   .spesifict_submenu_container{
+     display: flex;
+     justify-content: center;
+     background-color: rgba(180, 159, 255, 0.29);
+     margin-top: 20px;
+   }
+   .product_category .spesifict_submenu_product {
+    display: none;
+    position: relative;
+      width: fit-content;
+      border-top: 2px solid #8e8c8c4c;
+    }
+    .spesifict_submenu_product .spesifict_links{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      transition: 0.3s;
+      width: 150%;
+      height: 60px;
+    }
+    .product_category:hover .spesifict_submenu_product{
+      display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .spesifict_submenu_product .spesifict_links:hover{
+    background-color: rgba(88, 79, 121, 0.29);
+  }
+/* =============================== Spesifict Product Dropdown ======================= */
+}
+
+/* Mobile Responsive Onclick */
+@media screen and (max-width: 768px) {
+  .dropdown-content.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .dropdown-content.responsive .category_links {
+    float: none;
+    display: block;
+    text-align: center;
+    width: 100vw;
+    border-top: 2px solid #8e8c8c4c;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.02);
+  }
+  .dropdown-content.responsive{
+    display: block;
+    
+  }
+
+  .dropdown-content.responsive {float: none;}
+  .dropdown-content.responsive {position: relative;}
+  .dropdown-content.responsive .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* background-color: #1a1a1a; */
+  }
+
+  /* =============================== Spesifict Product Dropdown ======================= */
+    .product_category .spesifict_submenu_product {
+      display: none;
+      position: relative;
+      float: none;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        width: 100vw;
+        border-top: 2px solid #8e8c8c4c;
+        margin-top: 10px;
+        background-color: rgba(180, 159, 255, 0.29);
+    }
+    .spesifict_submenu_product a{
+      transition: 0.3s;
+      width: 100%;
+      text-align: center;
+    }
+    .product_category:hover .spesifict_submenu_product{
+      display: flex;
+
+    }
+    .spesifict_submenu_product a:hover{
+      background-color: rgba(88, 79, 121, 0.29);
+    }
+/* =============================== Spesifict Product Dropdown ======================= */
+}
+/* ////// Dropdown Content Product ////////// */
+
+/* =============================== Navbar ======================= */

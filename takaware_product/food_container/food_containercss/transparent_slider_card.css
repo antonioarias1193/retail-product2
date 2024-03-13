@@ -1,0 +1,243 @@
+@media (min-width: 780px) {
+    .transparent_slider {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 90vw;
+        /* Sesuaikan dengan lebar yang Anda inginkan */
+        margin: 0 auto;
+        margin-top: 20vh;
+        color: rgb(21, 9, 90);
+        height: max-content;
+        padding: 1%;
+        margin-block: 20vh;
+    }
+    
+    .card-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: max-content;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 0 0 34.33%;
+        /* Membuat setiap card memiliki lebar 33.33% dari container */
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    
+    .card img {
+        padding: 5px;
+        width: 90%;
+    }
+    .card_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* overflow: hidden; */
+        border-radius: 8px;
+    }
+    /* ISI */
+    .transparent_slider .title_card{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .transparent_slider .link_button_spesific{
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 800;
+        align-self: center;
+    }
+    
+    .transparent_slider .link_button_spesific .link_button{
+        position: relative;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        height: 50px;
+        width: 100%;
+        max-width: 200px;
+        background-color: white;
+        border: 2px solid rgb(21, 9, 90);;
+        border-radius: 20px;
+        transition: 0.2s;
+        padding-inline: 20px;
+    }
+    
+    .transparent_slider .link_button_spesific .link_button:hover{
+        background-color: rgb(21, 9, 90);
+        color: white;
+    }
+    
+    .transparent_slider .spec_description {
+        position: relative;
+        height:  max-content;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 1.1rem;
+    
+        align-self: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        text-align: left;
+        position: relative;
+        /* Maksimal lebar per kolom */
+        max-width: calc(22.22% - -200px); 
+        /* Maksimal 3 kolom, mengurangkan margin jika ada */
+        flex: 1 0 calc(22.22% - 10px); 
+        box-sizing: border-box; /* Menyesuaikan box-sizing untuk mengakomodasi padding dan border */
+    } 
+    /* ISI */
+    
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
+}
+
+/* ================================== Mobile Responsive ================================== */
+@media (max-width: 780px){
+    .transparent_slider {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 90vw;
+        /* Sesuaikan dengan lebar yang Anda inginkan */
+        margin: 0 auto;
+        margin-top: 20vh;
+        color: rgb(21, 9, 90);
+        height: max-content;
+        padding: 1%;
+        margin-block: 20vh;
+    }
+    
+    .card-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: max-content;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex: 0 0 110%;
+        /* Membuat setiap card memiliki lebar 33.33% dari container */
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    
+    .card img {
+        width: 50%;
+    }
+    .card_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+    /* ISI */
+    .transparent_slider .title_card{
+        margin-top: 30px;
+        text-align: center;
+    }
+    .transparent_slider .link_button_spesific{
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 800;
+        align-self: center;
+    }
+    
+    .transparent_slider .link_button_spesific .link_button{
+        position: relative;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        max-width: 200px;
+        background-color: white;
+        border: 2px solid rgb(21, 9, 90);;
+        border-radius: 20px;
+        transition: 0.2s;
+        padding-inline: 40px;
+    }
+    
+    .transparent_slider .link_button_spesific .link_button:hover{
+        background-color: rgb(21, 9, 90);
+        color: white;
+    }
+    
+    .transparent_slider .spec_description {
+        position: relative;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 1.1rem;
+    
+        align-self: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        text-align: left;
+        position: relative;
+        /* Maksimal lebar per kolom */
+        max-width: calc(22.22% - -200px); 
+        /* Maksimal 3 kolom, mengurangkan margin jika ada */
+        flex: 1 0 calc(22.22% - 10px); 
+        box-sizing: border-box; /* Menyesuaikan box-sizing untuk mengakomodasi padding dan border */
+    } 
+
+    .transparent_slider .spec_description .desc{
+        font-size: 1.5rem;
+    }
+    /* ISI */
+    
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .prev {
+        left: 0;
+    }
+    
+    .next {
+        right: 0;
+    }
+}

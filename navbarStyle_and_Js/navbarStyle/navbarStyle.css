@@ -1,0 +1,327 @@
+*{
+    font-family: 'Cambria';
+    margin: 0;
+    padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* pakai body width 100% biar bisa flex space between */
+body {
+  width: 100%;
+}
+li{
+    list-style: none;
+  }
+
+  /* =============================== Desktop Responsive Mode ======================= */
+  @media screen and (min-width: 768px) {
+    .navbar_header{
+      background-color: transparent;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.3s ease-in-out;
+      z-index: 2;
+    }
+
+  /* On Hover header */
+  .navbar_header:hover{
+    background-color: white;
+    border-style: #1a1a1a;  
+  }
+  
+  .navbar_header:hover .nav_branding,
+  .navbar_header:hover .nav_item a,
+  .navbar_header:hover .dropdown .dropbtn{
+    color: black;
+  }
+  /* On Hover header */
+
+  .nav_item a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .navbar_container{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  .nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .nav_branding{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  
+  }
+  .dropdown .dropbtn {
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  /* =============================== Navbar Menu 2 ======================= */
+
+
+  .dropdown-content {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 10vw;
+    left: 0px;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.4s;
+  }
+  .dropdown-content .category_links {
+    flex: 0.3;
+    color: black;
+    padding: 12px 0px;
+  }
+  .dropdown_spesific_menu{
+    flex-basis: 70px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .navbar_header:hover .dropdown-content{
+    height: max-content;
+    background-color: white;
+    border-top: 2px solid rgba(128, 128, 128, 0.353);
+  }
+  .product_category_links_dropdown{
+    display: flex;
+  }
+  
+  /* =============================== Navbar Menu 2 ======================= */
+  
+  /* =============================== Spesifict Product Dropdown 3 ======================= */
+  .product_category .spesifict_submenu_product{
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin-right: 20vw;
+    gap: 10px;
+    background-color: rgba(180, 159, 255, 0.29);
+    border-top: 2px solid #8e8c8c4c;
+    transition: 0.3s;
+  }
+
+  .product_category .spesifict_submenu_product a{
+    color: black;
+    padding: 12px 10px;
+    font-size: 1.3rem;
+   }
+   .product_category .spesifict_submenu_product a:hover{
+    background-color: rgba(180, 159, 255, 0.29);
+   }
+  /* =============================== Spesifict Product Dropdown 3 ======================= */
+  
+  }
+  /* =============================== Desktop Responsive Mode ======================= */
+
+
+
+
+  /* =============================== Mobile Responsive Mode ======================= */
+  @media screen and (max-width: 768px){
+    /* '''''''''''''''' ALL Activaction Toggle '''''''''''''''' */
+    .nav_menu{
+      left: -100%;
+    }
+          /* ------- Toggle Menu Dropdown Bar -------------- */
+          .nav_menu.active{
+            left: 0;
+          }
+          /* ------- Toggle Menu Dropdown Bar -------------- */
+    .dropdown-content{
+      height: 0;
+    }
+    /* '''''''''''''''' ALL Activaction Toggle '''''''''''''''' */
+    /* =============================== Navbar Header Container 1 ======================= */
+    /* -============ Navbar Header =========- */
+    .navbar_header{
+      background-color: transparent;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.3s ease-in-out;
+      z-index: 2;
+    }
+    /* On Active header */
+    .navbar_header.active{
+      background-color: white;
+    }
+    /* On Hover header */
+    .navbar_header:hover{
+      background-color: white;
+      border-style: #1a1a1a;  
+    }
+    /* -============ Navbar Header =========- */
+    /* -============ Navbar Container =========- */
+    .navbar_container{
+      min-height: 70px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 24px;
+    }
+    
+    /* -============ Branding =========- */
+    .nav_branding{
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+    .navbar_header.active .nav_branding{
+        color: black;
+      }
+      /* On Active header */
+      .navbar_header:hover .nav_branding{
+        color: black;
+      }
+    /* -============ Branding =========- */
+    /* -============ Hamburger =========- */
+    .hamburger{
+      display: block;
+      cursor: pointer;
+    }
+          .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: white;
+          }
+          .navbar_header.active .bar{
+            background-color: black;
+          }
+          .navbar_header:hover .bar{
+              background-color: black;
+          }
+      
+        .hamburger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    /* -============ Hamburger =========- */
+    
+    /* Mobile Responsive Mode */
+    /* =============================== Navbar Menu 2 ======================= */
+    .nav_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .nav_item{
+        margin: 16px 0;
+      }
+
+      .nav_item a{
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #1a1a1a;
+      }
+
+    /* ----------------- Product Parent Toggle into food container & beveragewares ----------------- */
+    .dropdown {
+        overflow: hidden;
+    }
+
+      .dropdown .dropbtn {
+        color: black; 
+        font-size: 1.5rem;
+        border: none;
+        background-color: inherit;
+        padding: 14px 16px;
+    }
+    
+      /* Color hover black effect */
+      .navbar_header:hover .nav_item a,
+      .navbar_header:hover .dropdown .dropbtn{
+          color: black;
+        }
+      /* Color hover black effect */
+        /* ----------------- Product Parent Toggle into food container & beveragewares ----------------- */
+
+    /* =============================== Navbar Menu 2 ======================= */
+    
+    /* =============================== Product Dropdown Content Spesific Submenu 3 ======================= */
+    
+        .dropdown-content {
+          transition: height 0.3s;
+        } 
+        /* ----------------- Food Container & Beverageware ----------------- */ 
+        .dropdown-content a {
+            display: block;
+            padding: 12px 16px;
+        }
+        /* ----------------- Food Container & Beverageware ----------------- */
+        .product_category_links_dropdown{
+            display: flex;
+            width: 100vw;
+            border-top: 2px solid #8e8c8c4c;
+          }
+          /* --------- Food Container & Beverageware Link ---------  */
+          .product_category_links_dropdown a{
+            flex: 1;
+            position: relative;
+            left: 40px;
+          }
+          /* --------- Button dropdown each Food Container & Beverageware ---------  */
+        .dropdown_spesific_menu{
+            position: relative;
+            border: none;
+            height: 50px;
+            width: 20vw;
+            background-color: rgba(113, 136, 241, 0.308);
+            font-size: 30px;
+        }
+        /* --------- Spesific produc each categories --------- */
+        .product_category .spesifict_submenu_product {
+          height: 0;
+          overflow: hidden;
+            margin-top: 10px;
+          transition: 0.3s;
+            background-color: rgba(180, 159, 255, 0.29);
+        }
+        .spesifict_submenu_product a:hover{
+          background-color: rgba(88, 79, 121, 0.29);
+        }
+        .spesifict_submenu_product a{
+          transition: 0.3s;
+        }
+        /* --------- Spesific produc each categories --------- */   
+    /* =============================== Product Dropdown Content Spesific Submenu 3 ======================= */
+  }
+  /* =============================== Mobile Responsive Mode ======================= */

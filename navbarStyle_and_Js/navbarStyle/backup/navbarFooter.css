@@ -1,0 +1,138 @@
+/* Responsive desktop */
+@media screen and (min-width: 769px){
+    .navbar_footer,
+    .footer_MediaSocial,
+    .footer_copyright p{
+        margin-left: 10vw;
+    }   
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px){
+    .navbar_footer,
+    .footer_MediaSocial,
+    .footer_copyright p{
+        margin-left: 5vw;
+    }   
+}
+
+
+.navbar_footer{
+    display: flex;
+    flex-direction: column;
+}
+.navbar_footer .navFooter_Branding{
+    margin-block: 30px;
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Navbar Menu */
+.navFooter_Links, 
+.navFooter_Dropdown{
+    margin-block: 20px;
+    text-decoration: none;
+}
+
+.navFooter_Links .About,
+.navFooter_Dropdown .Product
+{
+    color: black;
+  font-size: 1.5rem;
+  
+}
+.navFooter_Dropdown{
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+.navFooter_Dropdown .Product{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.dropdown_footer_content{
+    width: 100%;
+    text-align: left;
+    
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.02);
+    transition: 0.2s ease;
+}
+
+.dropdown_footer_content a{
+    display: none;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+/* Links Product Ketika Diklik */
+.dropdown_footer_content.responsive {
+    border-top: 2px solid #8e8c8c4c;
+    overflow: hidden;
+    
+}
+.dropdown_footer_content.responsive a{
+   display: block;
+}
+.dropdown_footer_content.responsive .footer_category_links{
+    margin-block: 30px;
+}
+  
+/* mobile responsive */
+@media screen and (min-width: 768px){
+    .navbar_footer{
+        margin-right: 9vw;
+    }
+}
+
+  /* ============================== Spesifict Submenu product ============================== */
+
+.footer_product_category .footer_spesifict_submenu_product{
+    display: none;
+    flex-direction: column;
+     background-color: rgba(180, 159, 255, 0.29);
+     margin-top: 30px;
+}
+
+.footer_product_category:hover .footer_spesifict_submenu_product{
+    display: flex;
+
+}
+.footer_spesifict_submenu_product .footer_spesific_link{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 40px;
+}
+.footer_spesifict_submenu_product .footer_spesific_link:hover{
+    background-color: rgba(88, 79, 121, 0.29);
+}
+
+/* ============================== Spesifict Submenu product ============================== */
+
+/* ================= Footer Media Social =================== */
+    .footer_MediaSocial{
+        display: flex;
+        gap: 25px;
+        margin-block: 30px;
+    }
+    .footer_MediaSocial a{
+        text-decoration: none;
+        color: black;
+    }
+    .footer_MediaSocial i{
+        font-size: 28px;
+    }
+
+/* ================= Footer Media Social =================== */
+
+/* ================= Footer Copyright =================== */
+    .footer_copyright{
+        padding-block: 30px;
+        border-top: 2px solid #8e8c8c4c;
+    }
+/* ================= Footer Copyright =================== */

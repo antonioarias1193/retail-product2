@@ -1,0 +1,91 @@
+
+.single_Page .page_container_Food_Container{
+    background-image: url('../images/Product/lifestyle/Lifestyle-8.jpg');
+}
+.single_Page .page_container_Beveragewares{
+    background-image: url('../images/Product/lifestyle/Lifestyle-34.jpg');
+}
+
+.single_Page .page_container_Food_Container,
+.single_Page .page_container_Beveragewares{
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.single_Page .container_overlay{
+    display: flex;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.641); */
+    height: 100%;
+    width: 100%;
+}
+.single_Page .page_text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    color: white;
+    text-shadow: 1px 1px 1px black,-1px 1px 1px black, 1px -1px 1px black,-1px -1px 1px black;
+}
+.single_Page .page_text button{
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    border: 2px solid;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s ease-in-out;
+    text-shadow: 1px 1px 1px black,-1px -1px 1px black,1px -1px 1px black;
+}
+.single_Page .page_text button:hover{
+    background-color: rgb(68, 0, 255);
+}
+
+@media screen and (min-width:780px) {
+    .single_Page .container_overlay{
+        align-items: center;
+    }
+    .single_Page .page_text{
+        margin-left: 20vw;
+        width: 600px;
+    }
+    .single_Page .page_text h1{
+        font-size: 2.4rem;
+
+    }
+    .single_Page .page_text p{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width:780px) and (min-width:550px) {
+    
+    .single_Page .container_overlay{
+        align-items: center;
+    }
+    .single_Page .page_text{
+        margin-left: 50px;
+        width: 400px;
+    }
+    .single_Page .page_text h1{
+        font-size: 2rem;
+
+    }
+    .single_Page .page_text p{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .single_Page.single_Page .container_overlay{
+        align-items: center;
+        justify-content: center;
+    }
+    .single_Page .page_text{
+        width: 300px;
+    }
+}

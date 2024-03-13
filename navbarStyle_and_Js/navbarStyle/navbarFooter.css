@@ -1,0 +1,161 @@
+/* Responsive desktop */
+@media screen and (min-width: 769px){
+    .navbar_footer,
+    .footer_MediaSocial,
+    .footer_copyright p{
+        margin-left: 10vw;
+    }   
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px){
+    .navbar_footer,
+    .footer_MediaSocial,
+    .footer_copyright p{
+        margin-left: 5vw;
+    }   
+}
+
+/* ============================ Menu About & Product ============================ */
+.navbar_footer{
+    display: flex;
+    flex-direction: column;
+}
+.navbar_footer .navFooter_Branding{
+    margin-block: 30px;
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Navbar Menu */
+.navFooter_Links, 
+.navFooter_Dropdown{
+    margin-block: 20px;
+    text-decoration: none;
+}
+
+.navFooter_Links .About,
+.navFooter_Dropdown .Product
+{
+    color: black;
+  font-size: 1.5rem;
+  
+}
+.navFooter_Dropdown{
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+}
+.navFooter_Dropdown .Product{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+/* mobile responsive */
+@media screen and (min-width: 768px){
+    .navbar_footer{
+        margin-right: 9vw;
+    }
+}
+/* ============================ Menu About & Product ============================ */
+
+/* ============================ Categories Food Container & Beverageware ============================ */
+.dropdown_footer_content{
+    width: 100%;
+    text-align: left;
+    
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.02);
+    transition: 0.2s ease;
+    height: 0;
+    border-top: 2px solid #8e8c8c4c;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.footer_container_foodcontainer_dropdown{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+.dropdown_footer_content .footer_category_links{
+    margin-block: 30px;
+}
+
+.footer_spesific_dropdown_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    font-size: 1.5rem;
+    flex: 0.2;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+.footer_spesific_dropdown_button:hover{
+    background-color: #efd0ef;
+    transition: all 0.3s;
+}
+
+.dropdown_footer_content a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+   flex: 1;
+}
+  
+  /* ============================== Spesifict Submenu product ============================== */
+
+.footer_product_category .footer_spesifict_submenu_product{
+    /* display: none; */
+    /* flex-direction: column; */
+    
+    overflow: hidden;
+    height: 0;
+     background-color: rgba(180, 159, 255, 0.29);
+     margin-top: 30px;
+     transition: 0.4s;
+}
+
+/* .footer_product_category:hover .footer_spesifict_submenu_product{
+    display: flex;
+
+} */
+.footer_spesifict_submenu_product .footer_spesific_link{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 40px;
+}
+.footer_spesifict_submenu_product .footer_spesific_link:hover{
+    background-color: rgba(88, 79, 121, 0.29);
+}
+
+/* ============================== Spesifict Submenu product ============================== */
+
+/* ================= Footer Media Social =================== */
+    .footer_MediaSocial{
+        display: flex;
+        gap: 25px;
+        margin-block: 30px;
+    }
+    .footer_MediaSocial a{
+        text-decoration: none;
+        color: black;
+    }
+    .footer_MediaSocial i{
+        font-size: 28px;
+    }
+
+/* ================= Footer Media Social =================== */
+
+/* ================= Footer Copyright =================== */
+    .footer_copyright{
+        padding-block: 30px;
+        border-top: 2px solid #8e8c8c4c;
+    }
+/* ================= Footer Copyright =================== */

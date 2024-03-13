@@ -1,0 +1,61 @@
+body{
+    width: 100%;
+}
+.foodcontainer_Content{
+    background-image: url("../../../images/products/food_container/cosmo/cosmo-index.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
+    overflow: hidden;
+    /* Overlay Shadow */
+}
+.foodcontainer_Content .foodcontainer_overlay{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    -webkit-mask: url("../../../images/products/food_container/cosmo/cosmo-index.jpg");
+            mask: url("../../../images/products/food_container/cosmo/cosmo-index.jpg");
+    /* Text div */
+}
+.foodcontainer_Content .foodcontainer_text{
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+}
+/* Text h1 */
+.foodcontainer_Content .foodcontainer_text h1{
+    color: white;
+    position: fixed;
+    text-shadow: 5px 5px 5px black;
+}
+
+
+
+@media screen and (min-width:769px) {
+    .foodcontainer_Content h1{
+        font-size: 4rem;
+    }
+    .foodcontainer_text{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .foodcontainer_Content h1{
+        font-size: 3rem;
+    }
+    .foodcontainer_text{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .foodcontainer_text{
+        justify-content: center;
+    }
+    .foodcontainer_Content h1{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,60 @@
+body{
+    width: 100%;
+}
+.beverageware_Content{
+    background-image: url("../../../images/products/beveragewares/izzy/izzy-index3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background-attachment: fixed;
+    overflow: hidden;
+}
+/* Overlay Shadow */
+.beverageware_Content .beverageware_overlay{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    -webkit-mask: url("../../../images/products/beveragewares/izzy/izzy-index3.jpg");
+            mask: url("../../../images/products/beveragewares/izzy/izzy-index3.jpg");
+    /* Text div */
+}
+.beverageware_Content .beverageware_text{
+    display: flex;
+    height: 100%;
+    position: relative;
+    align-items: center;
+}
+/* Text h1 */
+.beverageware_Content .beverageware_text h1{
+    color: white;
+    position: fixed;
+    text-shadow: 5px 5px 5px black;
+}
+
+@media screen and (min-width:769px) {
+    .beverageware_Content h1{
+        font-size: 4rem;
+    }
+    .beverageware_text{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .beverageware_Content h1{
+        font-size: 3rem;
+    }
+    .beverageware_text{
+        justify-content: center;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+    .beverageware_text{
+        justify-content: center;
+    }
+    .beverageware_text h1{
+        font-size: 2rem;
+    }
+}

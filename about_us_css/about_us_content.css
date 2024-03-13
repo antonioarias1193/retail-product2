@@ -1,0 +1,54 @@
+body{
+    width: 100%;
+}
+.about_us_Content{
+    background-image: url("../images/DSCF0464.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Overlay Shadow */
+}
+
+.about_us_Content .about_us_text{
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+/* Text h1 */
+.about_us_Content .about_us_text h1{
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+
+
+@media screen and (min-width:769px) {
+    .about_us_Content h1{
+        font-size: 4rem;
+    }
+    .about_us_text{
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .about_us_Content h1{
+        font-size: 3rem;
+    }
+    .about_us_text{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .about_us_text{
+        justify-content: center;
+    }
+    .about_us_Content h1{
+        font-size: 2rem;
+    }
+}

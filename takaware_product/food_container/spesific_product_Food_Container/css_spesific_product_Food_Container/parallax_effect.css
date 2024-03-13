@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'tahoma';
+}
+
+/* jangan diotak atik */
+.parallax_effect .height_parallax {
+    height: 95vh;
+}
+/* jangan diotak atik */
+
+.parallax_effect .parallax-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.parallax_effect .text_container {
+    height: 100vh;
+    background-color: white;
+ }
+
+ .parallax_effect .parallax-text {
+    /* Parallax effect */
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: transform 0.2s ease;
+    opacity: 0;
+    /* Parallax effect */
+    color: black;
+}
+
+/* Desktop Responsive */
+@media (min-width:800px) {
+    .parallax-text{
+        width: 100%;
+        font-size: 1.5rem;
+        top: 30%;
+    }
+    .parallax-text h1 {
+        width: 700px;
+        margin-left: 10vw;
+    }
+}  
+
+@media (min-width:800px){
+    .parallax-container{
+        background-position-y: 55%;
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width:800px) and (min-width:550px){
+    .parallax-text{
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    .parallax-text h1 {
+        width: 500px;
+        margin-left: 50px;
+    }
+}  
+@media (max-width:550px) {
+    .parallax-text{
+        width: 90%;
+        font-size: 1rem;
+    }
+}  
